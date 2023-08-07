@@ -1,0 +1,23 @@
+version = 0.1
+[default.pipeline_bootstrap.parameters]
+oidc_provider_url = "https://token.actions.githubusercontent.com"
+oidc_client_id = "sts.amazonaws.com"
+github_org = "rayprogramming"
+github_repo = "serverless-cms"
+deployment_branch = "dev"
+oidc_provider = "github-actions"
+permissions_provider = "OpenID Connect (OIDC)"
+
+[dev.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::529080338478:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-1LWZZDOAH9OZB"
+cloudformation_execution_role = "arn:aws:iam::529080338478:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1QHVVAJOPVZKO"
+artifacts_bucket = "aws-sam-cli-managed-dev-pipeline-artifactsbucket-1ja32td71ec0u"
+image_repository = ""
+region = "us-east-2"
+
+[prod.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::529080338478:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-8QE8MZGFZ5OK"
+cloudformation_execution_role = "arn:aws:iam::529080338478:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-7MY1GARACF2Q"
+artifacts_bucket = "aws-sam-cli-managed-prod-pipeline-artifactsbucket-1jw1zkylfjjgf"
+image_repository = ""
+region = "us-east-2"
