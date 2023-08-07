@@ -79,7 +79,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd serverless-cms
       - uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
@@ -110,7 +109,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd serverless-cms
       - uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
@@ -166,7 +164,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: serverless-cms
       - uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
@@ -199,7 +196,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: serverless-cms
       - run: |
           # trigger the integration tests here
 
@@ -212,7 +208,6 @@ jobs:
     # environment: <configured-environment>
     steps:
       - uses: actions/checkout@v3
-      - run: serverless-cms
       - uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
